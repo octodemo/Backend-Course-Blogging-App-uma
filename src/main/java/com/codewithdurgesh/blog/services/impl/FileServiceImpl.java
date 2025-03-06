@@ -53,31 +53,7 @@ public class FileServiceImpl implements FileService {
 	}
 
 	
-		public static void SampleNestedIfMethod(String[] args) {
-			int age = 25;
-			String country = "USA";
-			boolean hasPermission = true;
-			boolean isMember = false;
-			
-			// Deeply nested conditionals
-			if (age > 18) {
-				if (country.equals("USA")) {
-					if (hasPermission) {
-						if (isMember) {
-							System.out.println("Access granted: Adult from USA, with permission, and is a member.");
-						} else {
-							System.out.println("Access denied: Adult from USA, with permission, but not a member.");
-						}
-					} else {
-						System.out.println("Access denied: Adult from USA, without permission.");
-					}
-				} else {
-					System.out.println("Access denied: Adult, but not from USA.");
-				}
-			} else {
-				System.out.println("Access denied: Underage.");
-			}
-		}
+		
 	
 	
 
