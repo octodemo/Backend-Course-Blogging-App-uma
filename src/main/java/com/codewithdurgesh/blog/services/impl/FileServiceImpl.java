@@ -52,6 +52,22 @@ public class FileServiceImpl implements FileService {
 		return is;
 	}
 
+	 public static String checkConditions(int a, int b, int c) {
+        if (a > 0) {
+            if (b > 0) {
+                if (c > 0) {
+                    return "All are positive";
+                } else {
+                    return "c is not positive";
+                }
+            } else {
+                return "b is not positive";
+            }
+        } else {
+            return "a is not positive";
+        }
+    }
+
 	
 		
 	
