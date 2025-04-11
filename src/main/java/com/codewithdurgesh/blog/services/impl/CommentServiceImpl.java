@@ -55,4 +55,21 @@ public class CommentServiceImpl implements CommentService {
 		return null; // Should use modelMapper to map Comment to CommentDto
 	}
 
+	@Override
+public List<CommentDto> getAllCommentsByPostId(Integer postId) {
+
+    List<Comment> comments = this.commentRepo.findByPostId(postId); // Assuming such a method exists in CommentRepo
+
+    // Issue 1: Null check for comments is missing.
+    // Issue 2: Improper exception handling for a case where comments list might be empty or null.
+
+    List<CommentDto> commentDtos = comments.stream()
+            .map(comment -> this.modelMapper.map(comment, CommentDto.class))
+            .collect(Collectors.toList());
+
+    return commentDtos;
+
+  
+}
+
 }
